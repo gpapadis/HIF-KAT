@@ -84,8 +84,8 @@ dataset = Dataset(
     attri_len = attri_len,
 
     embedding_type = "fasttext",
-    embedding_path = "~/.vector_cache/fasttext",
-    embedding_model = "fasttext.wiki.en.300d",
+    embedding_path = "/root/.vector_cache",
+    embedding_model = "wiki.en.bin",
 
     init_token = "<<<",
     eos_token = ">>>"
