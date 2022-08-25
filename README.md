@@ -7,24 +7,14 @@ Source code for ACL 2021 paper "[Interpretable and Low-Resource Entity Matching 
 
 ### External Resources
 
-We provide our external resources in the [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/cb0f96ab71634cf8a122/). 
-They include our used **fasttext word embeddings** and our used **conda environment**.
-
-Due to the limitation of file size, we zip and split the files into pieces. 
-In particular, these files are zipped by:
+We provide our external resources, i.e., our **fasttext word embeddings** and our used **conda environment**.
 
 ```bash
-tar -zcvf - fasttext.wiki.en.300d.bin | split -b 1024m - embedding.tar.gz.
-tar -zcvf - em2 | split -b 2048m - em2.tar.gz.
-```
+wget https://dl.fbaipublicfiles.com/fasttext/vectors-wiki/wiki.en.zip
+unzip wiki.en.zip
+rm wiki.en.vec
 
-#### How to Unzip
-
-```bash
-cat embedding.tar.gz.a* embedding.tar.gz
-tar -xf embedding.tar.gz
-
-cat em2.tar.gz.a* em2.tar.gz
+wget https://zenodo.org/record/7020029/files/em2.tar.gz
 tar -xf em2.tar.gz
 ```
 
